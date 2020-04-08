@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["test"],"mappings":"AAAA;;AAEA,IAAIA,IAAI,GAAG,CAAX","sourcesContent":["'use strict';\n\nlet test = 5;"],"file":"index.js"}

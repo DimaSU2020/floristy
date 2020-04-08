@@ -1,0 +1,9 @@
+h1 {
+  color: red;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+  h1:hover {
+    color: blue;
+    text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */
