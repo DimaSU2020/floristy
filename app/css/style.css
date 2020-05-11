@@ -16,78 +16,68 @@ body {
   color: white;
   background-color: #3B181E; }
 
-.header-container {
-  /*@media screen and (min-width: 320px) and (max-width: 768px){
-    width: 768px;
-    height: 120px;
-    font-size: 20px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 1920px;
-    height: 120px;
-    font-size: 20px;
-  }*/ }
-  @media screen and (max-width: 320px) {
-    .header-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: row;
-              flex-flow: row;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-      width: 320px;
-      height: 64px; } }
-  @media screen and (max-width: 320px) {
-    .header-container .logo-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-      margin-right: 25px; }
-      .header-container .logo-container__pic {
-        color: white; }
-      .header-container .logo-container__text {
-        font-size: 12px;
-        text-transform: uppercase; } }
-  @media screen and (max-width: 320px) {
-    .header-container .nav-knobe {
-      width: 40px;
-      height: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
-      .header-container .nav-knobe__line {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-item-align: center;
-            align-self: center;
-        width: 37px;
-        height: 2px;
-        margin-bottom: 12px;
-        background-color: white; }
-      .header-container .nav-knobe__line:nth-child(2) {
-        margin-bottom: 23px; } }
+@media screen and (max-width: 320px) {
+  .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 320px;
+    height: 64px;
+    border: 1px solid red; }
+  .logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-right: 25px;
+    border: 1px solid blue; }
+  .logo {
+    color: white; }
+  .logo-container__text {
+    font-size: 12px;
+    text-transform: uppercase; }
+  .nav-button {
+    display: block;
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 40px;
+    height: 40px;
+    background-color: green; }
+  .nav-button span,
+  .nav-button span::before,
+  .nav-button span::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    width: 35px;
+    height: 2px;
+    background-color: #3B181E; }
+  .nav-button span::before,
+  .nav-button span::after {
+    content: '';
+    display: block; }
+  .nav-button span::before {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+    background-color: white; }
+  .nav-button span::after {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+    background-color: white; } }
 
 /*# sourceMappingURL=style.css.map */
