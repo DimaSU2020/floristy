@@ -1,4 +1,9 @@
 @font-face {
-    font-family: Forum, sans-serif;
-    src: url(/Users/Dmitry/Desktop/myproject/floristy/app/fonts/forum_regular.otf);
+    font-family: "Forum";
+    src: url("../fonts/Forum.eot") format("eot"),
+    url("../fonts/Forum.woff") format("woff"),
+    url("../fonts/Forum.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }

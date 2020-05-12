@@ -48,7 +48,7 @@ function watch(cb) {
   browserSync.init({
     reloadOnRestart: true,
     notify: false,
-    port: 3000,
+    port: 9000,
     startPath: "/",
     server: {
       baseDir: ['./app']
