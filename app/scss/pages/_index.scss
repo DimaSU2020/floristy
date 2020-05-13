@@ -1,38 +1,33 @@
-@media screen and (max-width: 320px) {
-  body {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    font-family: $font-main;
-    color: $font-color;
-    background-color: $color-main;
-  }
-  .header-container {
-    display: flex;
-    justify-content: space-around;
-    width: 320px;
-    padding-top: 15px;
-    margin-bottom: 10px;
-  }
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    margin-right: 25px;
-  }
-  .logo {
-    color: white;
-  }
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  font-family: $font-main;
+  color: $font-color;
+  background-color: $color-main;
+}
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  width: 320px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  margin-right: 25px;
 
-  .logo-container__text {
+  &__text {
     font-size: 12px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-
-  .nav-button {
+}
+.nav-button {
     display: block;
     position: relative;
     align-self: center;
@@ -40,10 +35,10 @@
     height: 40px;
     border: none;
     background-color: $color-main;
-  }
-  .nav-button span,
-  .nav-button span::before,
-  .nav-button span::after {
+  
+    span,
+    span::before,
+    span::after {
     position: absolute;
     top: 50%; margin-top: -1px;
     left: 0;
@@ -51,52 +46,171 @@
     height: 2px;
     background-color: $color-main;
   }
-  .nav-button span::before,
-  .nav-button span::after {
+    span::before,
+    span::after {
     content: '';
     display: block;
   }
-  .nav-button span::before {
+    span::before {
     transform: translateY(-7px);
     background-color: white;
   }
-  .nav-button span::after {
+    span::after {
     transform: translateY(7px);
     background-color: white;
   }
-  .section-first {
-    margin-bottom: 50px;
-  }
-  .section-second {
+}
+
+.section-first {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
+
+  &__img {
+    background-image: url("/img/1iphone.jpg");
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 466px;
   }
-  .block-inform {
+
+  .first-block-inform {
     width: 100%;
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 0.09em;
+      padding-top: 85px;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
   }
-  .block-inform h2 {
-    font-size: 20px;
-    letter-spacing: 0.06em;
-    padding-left: 10px;
-    text-transform: uppercase;
+  &__button {
+    display: block;
+    position: relative;
+    left: 59px;
+    width: 180px;
+    height: 50px;
+    padding: 0;
+    border: 1px solid rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.4);
+    margin-bottom: 45px;
+
+    span {
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: white;
+    }
   }
-  .section-second__img {
+  .container-icon {
+    box-sizing: border-box;
+    margin: 0;
+    height: auto;
+    margin-bottom: 40px;
+    border: 1px solid white;
+  }
+  .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    &__item {
+      text-align: center;
+      filter: invert(100%);
+      width: 35px;
+      height: 35px;
+      border-radius: 35px;
+      margin-right: 40px;
+      background-color: rgb(76, 247, 8);
+    }
+    &__item:nth-child(4) {
+      margin-right: 0px;
+    }
+  }
+  .container-arrow {
+    box-sizing: border-box;
+    margin: 0;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .arrow {
     display: flex;
-    background-image: url("/app/img/2iphone.jpg");
+    justify-content: center;
+    align-items: center;
+
+  &__item {
+    filter: invert(80%);
+    }
+  }
+}
+
+.section-second {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+  .second-block-inform {
+    width: 100%;
+    
+
+    h2 {
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      padding-left: 10px;
+      text-transform: uppercase;
+    }
+  }
+  .section-second-img {
+    display: flex;
+    background-image: url("/img/2iphone.jpg");
     background-repeat: no-repeat;
     width: 288px;
     height: 392px;
   }
+    .page-number span {
+        width: 35px;
+        height: 20px;
+        border: 1px solid blue;
+    }
 
+    .page-indicator {
+      display: block;
+      position: relative;
+      align-self: center;
+      width: 90%;
+      height: 4px;
+    }
+    .page-indicator span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20%;
+      height: 1px;
+      background-color:rgb(146, 146, 146);
+    }
 
-  .footer-container {
-    position: fixed;
-    left: 0; bottom: 0;
-    width: 100%;
-  }
-  .footer-container__line {
+    .section-third {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .section-third-img {
+      display: flex;
+      background-image: url("/img/3iphone.jpg");
+      background-repeat: no-repeat;
+      width: 288px;
+      height: 170px;
+    }
+  
+.footer-container {
+  position: fixed;
+  left: 0; bottom: 0;
+  width: 100%;
+
+  &__line {
     display: block;
     position: relative;
     align-self: center;
@@ -105,7 +219,7 @@
     border: none;
     background-color: $color-main;
   }
-  .footer-container__line span {
+  &__line span {
     position: absolute;
     top: 50%;
     left: 5%;
@@ -114,10 +228,10 @@
     background-color:rgb(146, 146, 146);
   }
 
-  .footer-container__text {
+  &__text {
     padding: 0; 
   }
-  .footer-container li {
+  li {
     position: relative;
     font-size: 16px;
     font-weight: lighter;
@@ -126,26 +240,27 @@
     list-style-type: none;
     text-align:  center;
   }
-  .footer-container li:nth-last-child(1) {
+  li:nth-last-child(1) {
     margin-bottom: 30px;
   }
-  .container-icon {
-    box-sizing: border-box;
-    margin: 0;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  .social {
+}
+.container-icon {
+  box-sizing: border-box;
+  margin: 0;
+  height: auto;
+  margin-bottom: 20px;
+}
+.social {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .social__item {
+
+  &__item {
     width: 30px;
     height: 30px;
     margin-right: 40px;
   }
-  .social__item:nth-child(4) {
+  &__item:nth-child(4) {
     width: 35px;
     height: 35px;
     margin-right: 0px;
