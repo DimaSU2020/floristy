@@ -227,8 +227,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
-  border: 1px solid white; }
+  margin-bottom: 50px; }
 
 .second-block-inform {
   width: 100%; }
@@ -248,35 +247,31 @@ body {
   height: 392px; }
 
 .page-number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
-  height: 50px;
-  border: 1px solid blue; }
+  padding: 10px; }
 
-/*.page-number span{
-      
-    
-    }*/
+.page-number progress {
+  border: 0;
+  width: 70px;
+  height: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff; }
+
 .page-number span {
-  font-size: 36px; }
+  font-size: 30px; }
 
-/*.page-indicator {
-      display: flex;
-      align-self: center;
-      width: 90%;
-      height: 40px;
-    }
-    .page-indicator span {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 40px;
-      height: 5px;
-      margin-right: 5px;
-      background-color:rgb(146, 146, 146);
-    }*/
+progress {
+  border: 0;
+  width: 60px;
+  height: 4px;
+  margin-right: 10px;
+  background-color: #ffffff; }
+
+progress::-webkit-progress-value {
+  background: white; }
+
 .section-third {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,7 +293,7 @@ body {
   height: 170px; }
 
 .footer-container {
-  position: fixed;
+  /*position: fixed;*/
   left: 0;
   bottom: 0;
   width: 100%; }
@@ -333,5 +328,29 @@ body {
   .footer-container .social__item {
     font-size: 20px;
     color: white; }
+  .footer-container .instagram:hover {
+    font-size: 25px;
+    color: #3B181E;
+    background-color: white;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white; }
+  .footer-container .facebook:hover {
+    font-size: 25px;
+    color: #3B181E;
+    background-color: white;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white; }
+  .footer-container .whatsapp:hover {
+    font-size: 25px;
+    color: #3B181E;
+    background-color: white;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white; }
+  .footer-container .vk:hover {
+    font-size: 25px;
+    color: #3B181E;
+    background-color: white;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white; }
 
 /*# sourceMappingURL=style.css.map */
