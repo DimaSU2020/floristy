@@ -57,7 +57,8 @@ body {
   width: 40px;
   height: 40px;
   border: none;
-  background-color: #3B181E; }
+  background-color: #3B181E;
+  cursor: pointer; }
   .nav-button span,
   .nav-button span::before,
   .nav-button span::after {
@@ -66,19 +67,37 @@ body {
     margin-top: -1px;
     left: 0;
     width: 35px;
-    height: 2px;
+    height: 8px;
     background-color: #3B181E; }
   .nav-button span::before,
   .nav-button span::after {
     content: '';
     display: block; }
   .nav-button span::before {
+    height: 2px;
     -webkit-transform: translateY(-7px);
             transform: translateY(-7px);
-    background-color: white; }
+    background-color: white;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s; }
   .nav-button span::after {
+    height: 2px;
     -webkit-transform: translateY(7px);
             transform: translateY(7px);
+    background-color: white;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s; }
+  .nav-button span:hover::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: white; }
+  .nav-button span:hover::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     background-color: white; }
 
 .section-first {
@@ -117,11 +136,11 @@ body {
   border: 1px solid white;
   background-color: rgba(0, 0, 0, 0.4);
   margin-bottom: 45px;
+  cursor: pointer;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s; }
 
 .works-button span {
-  text-align: center;
   letter-spacing: 0.15em;
   color: white;
   -webkit-transition: color 0.3s;
@@ -166,6 +185,7 @@ body {
   font-size: 25px;
   color: white;
   background-color: #3B181E;
+  cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
 
@@ -194,15 +214,23 @@ body {
   font-size: 25px;
   color: #3B181E;
   background-color: white;
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white; }
+  -webkit-box-shadow: 0 0 12px white;
+          box-shadow: 0 0 12px white; }
 
 .container-arrow {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   height: auto;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
+
+.container-arrow:hover {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px); }
 
 .arrow {
   display: -webkit-box;
@@ -215,8 +243,17 @@ body {
       -ms-flex-align: center;
           align-items: center; }
   .arrow__item {
-    -webkit-filter: invert(80%);
-            filter: invert(80%); }
+    -webkit-filter: invert(60%);
+            filter: invert(60%);
+    cursor: pointer;
+    -webkit-transition: -webkit-filter 0.3s;
+    transition: -webkit-filter 0.3s;
+    transition: filter 0.3s;
+    transition: filter 0.3s, -webkit-filter 0.3s; }
+  .arrow__item:hover {
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+    cursor: pointer; }
 
 .section-second {
   display: -webkit-box;
@@ -238,29 +275,35 @@ body {
     text-transform: uppercase; }
 
 .section-second-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-image: url("/img/2iphone.jpg");
-  background-repeat: no-repeat;
-  width: 288px;
-  height: 392px; }
+  position: relative;
+  width: 100%; }
 
-.page-number {
+.section-second-img h2 {
+  position: absolute;
+  top: 10px;
+  left: 90px;
   width: 100%;
-  padding: 10px; }
+  font-size: 30px; }
 
-.page-number progress {
+.section-second-img progress {
+  position: absolute;
+  top: 50px;
+  left: 20px;
   border: 0;
-  width: 70px;
+  width: 60px;
   height: 2px;
-  margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 10px;
   background-color: #ffffff; }
 
-.page-number span {
-  font-size: 30px; }
+.section-second-img h3 {
+  position: absolute;
+  top: 310px;
+  left: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
 
 progress {
   border: 0;
@@ -271,6 +314,21 @@ progress {
 
 progress::-webkit-progress-value {
   background: white; }
+
+.serv-offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 16px;
+  line-height: 170%;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 4px solid red; }
 
 .section-third {
   display: -webkit-box;
@@ -292,8 +350,65 @@ progress::-webkit-progress-value {
   width: 288px;
   height: 170px; }
 
+.section-third h2 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 20px;
+  line-height: 170%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 50px; }
+
+.section-third progress {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border: 0;
+  width: 120px;
+  height: 2px;
+  margin-right: 10px;
+  background-color: #ffffff; }
+
+.section-third h3 {
+  font-size: 14px;
+  line-height: 170%;
+  margin-right: 30px;
+  margin-bottom: 30px; }
+
+.section-third .works-button {
+  display: block;
+  position: relative;
+  left: -50px;
+  width: 180px;
+  height: 50px;
+  padding: 0;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 45px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
+
+.section-third .works-button span {
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: white;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+
+.section-third .works-button:hover {
+  border: 1px solid white;
+  background: white;
+  -webkit-box-shadow: 0 0 7px white;
+          box-shadow: 0 0 7px white; }
+
+.section-third .works-button:hover span {
+  color: #3B181E; }
+
 .footer-container {
-  /*position: fixed;*/
   left: 0;
   bottom: 0;
   width: 100%; }
@@ -322,11 +437,20 @@ progress::-webkit-progress-value {
     color: #929292;
     line-height: 25px;
     list-style-type: none;
-    text-align: center; }
+    text-align: center;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
   .footer-container li:nth-last-child(1) {
     margin-bottom: 30px; }
+  .footer-container li:hover {
+    color: white;
+    text-shadow: 0 0 10px #a3a3a3;
+    cursor: pointer; }
+  .footer-container .social {
+    height: 35px;
+    margin: 0; }
   .footer-container .social__item {
-    font-size: 20px;
+    font-size: 25px;
     color: white; }
   .footer-container .instagram:hover {
     font-size: 25px;
