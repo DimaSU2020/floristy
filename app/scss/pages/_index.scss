@@ -138,45 +138,27 @@ body {
   color: white;
   list-style: none;
   padding: 0 15px 0;
-}
-.social__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 25px;
-  color: white;
-  background-color: $color-main;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.instagram:hover {
-  font-size: 25px;
-  color: $color-main;
-  background-color: white;
-  box-shadow: 0 0 7px white;
-}
-.facebook:hover {
-  font-size: 25px;
-  color: $color-main;
-  background-color: white;
-  box-shadow: 0 0 7px white;
-}
-.whatsapp:hover {
-  font-size: 25px;
-  color: $color-main;
-  background-color: white;
-  box-shadow: 0 0 7px white;
-}
-.vk:hover {
-  font-size: 25px;
-  color: $color-main;
-  background-color: white;
-  box-shadow: 0 0 12px white;
-}
 
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    background-color: $color-main;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  &__item:hover {
+    font-size: 25px;
+    color: $color-main;
+    background-color: white;
+    box-shadow: 0 0 7px white;
+  }
+}
 .container-arrow {
   box-sizing: border-box;
   margin: 0;
@@ -265,29 +247,18 @@ progress:nth-last-child(1) {
 progress::-webkit-progress-value {
   background: rgb(255, 255, 255);
 }
-.serv-offer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  font-size: 16px;
-  line-height: 170%;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border: 4px solid red
-}
-
 
 .section-third {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
 } 
 .section-third-img {
   background-image: url("/img/3iphone.jpg");
   background-repeat: no-repeat;
   width: 288px;
   height: 170px;
+  margin-bottom: 20px;
 }
 .section-third h2 {
   width: 100%;
@@ -356,16 +327,16 @@ progress::-webkit-progress-value {
     height: 5px;
     border: none;
     background-color: $color-main;
+  
+    & span {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      width: 90%;
+      height: 1px;
+      background-color:rgb(146, 146, 146);
+    }
   }
-  &__line span {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    width: 90%;
-    height: 1px;
-    background-color:rgb(146, 146, 146);
-  }
-
   &__text {
     padding: 0; 
   }
@@ -378,45 +349,31 @@ progress::-webkit-progress-value {
     list-style-type: none;
     text-align:  center;
     transition: color 0.3s;
+  
+    &:hover {
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 10px rgb(163, 163, 163);
+      cursor: pointer;
+    }
   }
   li:nth-last-child(1) {
     margin-bottom: 30px;
   }
-  li:hover {
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 10px rgb(163, 163, 163);
-    cursor: pointer;
-  }
   .social {
     height: 35px;
     margin: 0;
-  }
-  .social__item {
-    font-size: 25px;
-    color: white;
-  }
-  .instagram:hover {
-    font-size: 25px;
-    color: $color-main;
-    background-color: white;
-    box-shadow: 0 0 7px white;
-  }
-  .facebook:hover {
-    font-size: 25px;
-    color: $color-main;
-    background-color: white;
-    box-shadow: 0 0 7px white;
-  }
-  .whatsapp:hover {
-    font-size: 25px;
-    color: $color-main;
-    background-color: white;
-    box-shadow: 0 0 7px white;
-  }
-  .vk:hover {
-    font-size: 25px;
-    color: $color-main;
-    background-color: white;
-    box-shadow: 0 0 7px white;
+
+    &__item {
+      font-size: 25px;
+      color: white;
+      transition: all 0.3s;
+    
+      &:hover {
+        font-size: 25px;
+        color: $color-main;
+        background-color: white;
+        box-shadow: 0 0 7px white;
+      }
+    }
   }
 }

@@ -169,54 +169,31 @@ body {
   color: white;
   list-style: none;
   padding: 0 15px 0; }
-
-.social__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 25px;
-  color: white;
-  background-color: #3B181E;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.instagram:hover {
-  font-size: 25px;
-  color: #3B181E;
-  background-color: white;
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white; }
-
-.facebook:hover {
-  font-size: 25px;
-  color: #3B181E;
-  background-color: white;
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white; }
-
-.whatsapp:hover {
-  font-size: 25px;
-  color: #3B181E;
-  background-color: white;
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white; }
-
-.vk:hover {
-  font-size: 25px;
-  color: #3B181E;
-  background-color: white;
-  -webkit-box-shadow: 0 0 12px white;
-          box-shadow: 0 0 12px white; }
+  .social__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    background-color: #3B181E;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .social__item:hover {
+    font-size: 25px;
+    color: #3B181E;
+    background-color: white;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white; }
 
 .container-arrow {
   -webkit-box-sizing: border-box;
@@ -322,21 +299,6 @@ progress:nth-last-child(1) {
 progress::-webkit-progress-value {
   background: white; }
 
-.serv-offer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  font-size: 16px;
-  line-height: 170%;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border: 4px solid red; }
-
 .section-third {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,14 +307,14 @@ progress::-webkit-progress-value {
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px; }
+          justify-content: center; }
 
 .section-third-img {
   background-image: url("/img/3iphone.jpg");
   background-repeat: no-repeat;
   width: 288px;
-  height: 170px; }
+  height: 170px;
+  margin-bottom: 20px; }
 
 .section-third h2 {
   width: 100%;
@@ -422,13 +384,13 @@ progress::-webkit-progress-value {
     height: 5px;
     border: none;
     background-color: #3B181E; }
-  .footer-container__line span {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    width: 90%;
-    height: 1px;
-    background-color: #929292; }
+    .footer-container__line span {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      width: 90%;
+      height: 1px;
+      background-color: #929292; }
   .footer-container__text {
     padding: 0; }
   .footer-container li {
@@ -441,41 +403,25 @@ progress::-webkit-progress-value {
     text-align: center;
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }
+    .footer-container li:hover {
+      color: white;
+      text-shadow: 0 0 10px #a3a3a3;
+      cursor: pointer; }
   .footer-container li:nth-last-child(1) {
     margin-bottom: 30px; }
-  .footer-container li:hover {
-    color: white;
-    text-shadow: 0 0 10px #a3a3a3;
-    cursor: pointer; }
   .footer-container .social {
     height: 35px;
     margin: 0; }
-  .footer-container .social__item {
-    font-size: 25px;
-    color: white; }
-  .footer-container .instagram:hover {
-    font-size: 25px;
-    color: #3B181E;
-    background-color: white;
-    -webkit-box-shadow: 0 0 7px white;
-            box-shadow: 0 0 7px white; }
-  .footer-container .facebook:hover {
-    font-size: 25px;
-    color: #3B181E;
-    background-color: white;
-    -webkit-box-shadow: 0 0 7px white;
-            box-shadow: 0 0 7px white; }
-  .footer-container .whatsapp:hover {
-    font-size: 25px;
-    color: #3B181E;
-    background-color: white;
-    -webkit-box-shadow: 0 0 7px white;
-            box-shadow: 0 0 7px white; }
-  .footer-container .vk:hover {
-    font-size: 25px;
-    color: #3B181E;
-    background-color: white;
-    -webkit-box-shadow: 0 0 7px white;
-            box-shadow: 0 0 7px white; }
+    .footer-container .social__item {
+      font-size: 25px;
+      color: white;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .footer-container .social__item:hover {
+        font-size: 25px;
+        color: #3B181E;
+        background-color: white;
+        -webkit-box-shadow: 0 0 7px white;
+                box-shadow: 0 0 7px white; }
 
 /*# sourceMappingURL=style.css.map */
