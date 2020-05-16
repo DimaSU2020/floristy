@@ -140,21 +140,18 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s; }
-
-.works-button span {
-  letter-spacing: 0.15em;
-  color: white;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s; }
-
-.works-button:hover {
-  border: 1px solid white;
-  background: white;
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white; }
-
-.works-button:hover span {
-  color: #3B181E; }
+  .works-button span {
+    letter-spacing: 0.15em;
+    color: white;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
+  .works-button:hover {
+    border: 1px solid white;
+    background: white;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white; }
+  .works-button:hover span {
+    color: #3B181E; }
 
 .container-icon {
   height: auto;
@@ -200,15 +197,7 @@ body {
           box-sizing: border-box;
   margin: 0;
   height: auto;
-  margin-bottom: 20px;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s; }
-
-.container-arrow:hover {
-  -webkit-transform: translateY(7px);
-          transform: translateY(7px); }
+  margin-bottom: 20px; }
 
 .arrow {
   display: -webkit-box;
@@ -224,14 +213,13 @@ body {
     -webkit-filter: invert(60%);
             filter: invert(60%);
     cursor: pointer;
-    -webkit-transition: -webkit-filter 0.3s;
-    transition: -webkit-filter 0.3s;
-    transition: filter 0.3s;
-    transition: filter 0.3s, -webkit-filter 0.3s; }
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
   .arrow__item:hover {
     -webkit-filter: invert(100%);
             filter: invert(100%);
-    cursor: pointer; }
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px); }
 
 .section-second {
   display: -webkit-box;
@@ -261,30 +249,27 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%; }
-
-.section-second-img h2 {
-  position: absolute;
-  top: 10px;
-  left: 110px;
-  font-size: 30px; }
-
-.section-second-img progress {
-  position: absolute;
-  top: 50px;
-  left: 40px;
-  border: 0;
-  width: 60px;
-  height: 2px;
-  margin-right: 10px;
-  background-color: #ffffff; }
-
-.section-second-img h3 {
-  position: absolute;
-  margin-top: 330px;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 0.1em;
-  text-transform: uppercase; }
+  .section-second-img h2 {
+    position: absolute;
+    top: 10px;
+    left: 110px;
+    font-size: 30px; }
+  .section-second-img progress {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    border: 0;
+    width: 60px;
+    height: 2px;
+    margin-right: 10px;
+    background-color: #ffffff; }
+  .section-second-img h3 {
+    position: absolute;
+    margin-top: 330px;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    text-transform: uppercase; }
 
 progress {
   border: 0;
@@ -292,12 +277,17 @@ progress {
   height: 4px;
   margin-right: 10px;
   background-color: #ffffff; }
+  progress:nth-last-child(1) {
+    margin-right: 0px; }
+  progress::-webkit-progress-value {
+    background: white; }
 
-progress:nth-last-child(1) {
-  margin-right: 0px; }
-
-progress::-webkit-progress-value {
-  background: white; }
+.section-third-img {
+  background-image: url("/img/3iphone.jpg");
+  background-repeat: no-repeat;
+  width: 288px;
+  height: 170px;
+  margin-bottom: 20px; }
 
 .section-third {
   display: -webkit-box;
@@ -308,68 +298,54 @@ progress::-webkit-progress-value {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-
-.section-third-img {
-  background-image: url("/img/3iphone.jpg");
-  background-repeat: no-repeat;
-  width: 288px;
-  height: 170px;
-  margin-bottom: 20px; }
-
-.section-third h2 {
-  width: 100%;
-  padding-left: 20px;
-  margin: 0;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 170%;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-right: 50px; }
-
-.section-third progress {
-  border: 0;
-  width: 120px;
-  height: 2px;
-  margin-right: 10px;
-  background-color: #ffffff; }
-
-.section-third h3 {
-  font-size: 14px;
-  line-height: 170%;
-  margin: 0 30px 30px 0; }
-
-.section-third .works-button {
-  display: block;
-  position: relative;
-  left: -50px;
-  width: 180px;
-  height: 50px;
-  padding: 0;
-  border: 1px solid white;
-  background-color: rgba(0, 0, 0, 0.4);
-  margin-bottom: 45px;
-  cursor: pointer;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s; }
-
-.section-third .works-button span {
-  font-size: 11px;
-  line-height: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: white;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s; }
-
-.section-third .works-button:hover {
-  border: 1px solid white;
-  background: white;
-  -webkit-box-shadow: 0 0 7px white;
-          box-shadow: 0 0 7px white; }
-
-.section-third .works-button:hover span {
-  color: #3B181E; }
+  .section-third h2 {
+    width: 100%;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 170%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-right: 50px; }
+  .section-third progress {
+    border: 0;
+    width: 120px;
+    height: 2px;
+    margin-right: 10px;
+    background-color: #ffffff; }
+  .section-third h3 {
+    font-size: 14px;
+    line-height: 170%;
+    margin: 0 30px 30px 0; }
+  .section-third .works-button {
+    display: block;
+    position: relative;
+    left: -50px;
+    width: 180px;
+    height: 50px;
+    padding: 0;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 45px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s; }
+  .section-third .works-button span {
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: white;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
+  .section-third .works-button:hover {
+    border: 1px solid white;
+    background: white;
+    -webkit-box-shadow: 0 0 7px white;
+            box-shadow: 0 0 7px white; }
+  .section-third .works-button:hover span {
+    color: #3B181E; }
 
 .footer-container {
   left: 0;
@@ -407,8 +383,8 @@ progress::-webkit-progress-value {
       color: white;
       text-shadow: 0 0 10px #a3a3a3;
       cursor: pointer; }
-  .footer-container li:nth-last-child(1) {
-    margin-bottom: 30px; }
+    .footer-container li:nth-last-child(1) {
+      margin-bottom: 20px; }
   .footer-container .social {
     height: 35px;
     margin: 0; }
