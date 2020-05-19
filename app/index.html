@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 </head>
 <body>
+<section class="main">
 
-  <header class="header-container">
+  <header class="main__header">
 
     <div class="logo-container">
       <div class="logo-container__pic">
@@ -25,55 +26,52 @@
 
   </header>
 
-  <main class="main-container">
+  <section class="section-first">
+    <div class="section-first__img">
+      
+      <h2 class="first-block__inform">флористика <br>с душой</h2>
 
-    <section class="section-first">
-      <div class="section-first__img">
-        <div class="first-block-inform">
-        <h2>флористика <br>с душой</h2>
-        </div>
+      <button class="works-button">
+        <span class="works-button__text">смотреть работы</span>
+      </button>
 
-        <button class="works-button">
-          <span>смотреть работы</span>
-        </button>
+      <div class="container-icon">
+        <ul class="social">
+          <li class="social__item instagram">
+            <i class="fab fa-instagram"></i>
+          </li>
+          <li class="social__item facebook">
+            <i class="fab fa-facebook-f"></i>
+          </li>
+          <li class="social__item whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </li>
+          <li class="social__item vk">
+            <i class="fab fa-vk"></i>
+          </li>
+        </ul>
+      </div>
 
-        <div class="container-icon">
-          <ul class="social">
-            <li class="social__item instagram">
-              <i class="fab fa-instagram"></i>
-            </li>
-            <li class="social__item facebook">
-              <i class="fab fa-facebook-f"></i>
-            </li>
-            <li class="social__item whatsapp">
-              <i class="fab fa-whatsapp"></i>
-            </li>
-            <li class="social__item vk">
-              <i class="fab fa-vk"></i>
-            </li>
-          </ul>
-        </div>
-
-        <div class="container-arrow">
-          <div class="arrow">
-            <div class="arrow__item">
-              <img src="img/icon/arrow.png" width="20px" height="35px">
-            </div>
+      <div class="container-arrow">
+        <div class="arrow">
+          <div class="arrow__item">
+            <img src="img/icon/arrow.png" width="20px" height="35px">
           </div>
         </div>
       </div>
+    </div>
     </section>
 
     <section class="section-second">
-      <div class="second-block-inform">
-        <h2>каталог услуг</h2>
+      <div class="block-inform">
+        <h2 class="block-inform__tetxt">каталог услуг</h2>
       </div>
 
-      <div class="section-second-img">
+      <div class="section-second__img">
         <img src="img/2iphone.jpg" width="288px" height="392px">
-          <progress value="100" max="100"></progress>
-          <h2><span>01</span><h2>
-          <h3>букет невесты и свадебное <br>оформление</h3>
+          <progress class="catalog__line" value="100" max="100"></progress>
+          <h2 class="catalog__number">01<h2>
+          <h3 class="catalog__item">букет невесты и свадебное <br>оформление</h3>
       </div>
       <div class="page-indicator">
         <progress value="100" max="100"></progress>
@@ -82,19 +80,16 @@
         <progress value="0" max="100"></progress>
       </div>
     </section>
-      
 
     <section class="section-third">
       <div class="section-third-img"></div>
-        <h2>акционные <br>предложения<h2>
+        <h2 class="section-third__notice">акционные <br>предложения<h2>
         <progress value="100" max="100"></progress>
-        <h3>При заказе свадебного оформления <br>предоставляется скидка на букет невесты и <br>бутоньерку в размере 30%</h3>  
+        <h3 class="section-third__offer">При заказе свадебного оформления <br>предоставляется скидка на букет невесты и <br>бутоньерку в размере 30%</h3>  
         <button class="works-button">
           <span>заказать оформление</span>
         </button>
     </section>
-
-  </main>
 
   <footer class="footer-container">
     
@@ -127,10 +122,8 @@
       </ul>
     </div>
 
-
   </footer>
-  
-
+</section>
   <script src="js/vendors.js"></script>
   <script src="js/index.js"></script>
 </body>
