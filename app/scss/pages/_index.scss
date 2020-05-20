@@ -155,12 +155,7 @@
     box-shadow: 0 0 7px white;
   }
 }
-.container-arrow {
-  box-sizing: border-box;
-  margin: 0;
-  height: auto;
-  margin-bottom: 20px;
-}
+
 .arrow {
   display: flex;
   justify-content: center;
@@ -177,6 +172,7 @@
   }
 }
 
+
 .section-second {
   display: flex;
   flex-wrap: wrap;
@@ -189,7 +185,7 @@
   .block-inform__tetxt {
     font-size: 16px;
     letter-spacing: 0.06em;
-    padding-left: 20px;
+    padding-left: 12px;
     text-transform: uppercase;
   }
 }
@@ -250,7 +246,7 @@ progress {
   flex-wrap: wrap;
   justify-content: center;
 
-  &__notice { 
+  &__notice {
     width: 100%;
     padding-left: 20px;
     margin: 0;
@@ -259,14 +255,13 @@ progress {
     line-height: 170%;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-right: 50px;
+    
   }
-  & progress {
-    border: 0;
+   .section-third__line {
     width: 120px;
     height: 1px;
-    margin-right: 10px;
     background-color: #ffffff;
+    margin-right: 165px;
   }
   &__offer {
     font-size: 14px;
@@ -280,7 +275,7 @@ progress {
     width: 180px;
     height: 50px;
     padding: 0;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, 0.4);
     margin-bottom: 45px;
     cursor: pointer;
