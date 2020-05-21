@@ -9,16 +9,13 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 </head>
 <body>
-<section class="main">
 
-  <header class="main__header">
+  <header class="header">
 
-    <div class="logo-container">
-      <div class="logo-container__pic">
-        <img class="logo" src="img/logo.png">
-      </div>
-      <span class="logo-container__text">весна всегда</span>
-    </div>
+    <span class="logo">
+      <img class="logo__pic" src="img/logo.png">
+      <span class="logo__slogan">весна всегда</span>
+    </span>
 
     <button class="nav-button">
       <span></span>
@@ -26,20 +23,17 @@
 
   </header>
 
-  <section class="section-first">
-    <div class="section-first__img">
-      
-      <h2 class="first-block__inform">флористика <br>с душой</h2>
-      <!-- button делаю универсальной для всего макета 
-          и свойства менять буду модификаторами -->
-      <button class="works-button">
-        <span class="works-button__text">смотреть работы</span>
-      </button>
+  <main class="index">
 
-      <div class="container-icon">
+    <div class="index-first">
+        
+      <h1 class="index-first__title">Флористика с душой</h1>
+      
+      <button class="button-form">Смотреть работы</button>
+
         <ul class="social">
           <li class="social__item instagram">
-            <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram" ></i></a>
           </li>
           <li class="social__item facebook">
             <i class="fab fa-facebook-f"></i>
@@ -51,20 +45,21 @@
             <i class="fab fa-vk"></i>
           </li>
         </ul>
-      </div>
-    
-      <div class="arrow">
+      
+      <!--
+        <div class="arrow">
         <div class="arrow__item">
           <img src="img/icon/arrow.png" width="20px" height="35px">
         </div>
       </div>
-        
+      -->
     </div>
-    </section>
+      
 
-    <section class="section-second">
+    <div class="section-second">
+
       <div class="block-inform">
-        <h2 class="block-inform__tetxt">каталог услуг</h2>
+        <h2 class="block-inform__text">каталог услуг</h2>
       </div>
 
       <div class="section-second__img">
@@ -79,25 +74,29 @@
         <progress value="0" max="100"></progress>
         <progress value="0" max="100"></progress>
       </div>
-    </section>
+    </div>
 
-    <section class="section-third">
+    <div class="section-third">
       <div class="section-third-img"></div>
-        <h2 class="section-third__notice">акционные <br>предложения<h2>
-        <div class="section-third__line"></div>
-        <h3 class="section-third__offer">При заказе свадебного оформления <br>предоставляется скидка на букет невесты и <br>бутоньерку в размере 30%</h3>  
-        <button class="works-button">
-          <span>заказать оформление</span>
-        </button>
-    </section>
+      
+      <h2 class="section-third__notice">акционные предложения<h2>
+      
+      <div class="section-third__line"></div>
+      
+      <h3 class="section-third__offer">При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в размере 30%</h3>  
+      
+      <button class="button-form">Заказать оформление</button>
+          
+    </div>
+  </main>
 
-  <footer class="footer-container">
+  <footer class="footer">
     
-    <div class="footer-container__line">
+    <div class="footer__line">
       <span></span>
     </div>
 
-    <ul class="footer-container__text">
+    <ul class="footer__text">
     <li>Cвадебная флористика</li>
     <li>Букеты на любые мероприятия</li>
     <li>Букеты невесты</li>
@@ -108,7 +107,7 @@
     <div class="container-icon">
       <ul class="social">
         <li class="social__item instagram">
-          <i class="fab fa-instagram"></i>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram" ></i></a>
         </li>
         <li class="social__item facebook">
           <i class="fab fa-facebook-f"></i>
@@ -123,7 +122,7 @@
     </div>
 
   </footer>
-</section>
+
   <script src="js/vendors.js"></script>
   <script src="js/index.js"></script>
 </body>

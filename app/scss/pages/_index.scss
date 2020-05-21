@@ -1,30 +1,32 @@
-.main {
+* {
+  border: 1px solid green;
+}
+
+body {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  font-family: $font-main;
+  font-family: $font-face;
   color: $font-color;
   background-color: $color-main;
 }
-.main__header {
+.header {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 320px;
+  width: 100%;
   padding-top: 15px;
   margin-bottom: 10px;
-
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
+}
+  .logo {
+    display: block;
+    width: 110px;
     margin-right: 25px;
 
-    &__text {
+    &__slogan {
       font-size: 12px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      padding-left: 15px;
     }
   }
 
@@ -73,69 +75,62 @@
       background-color: white;
     }
   }
-}
 
-.section-first {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 50px;
-
-  &__img {
-    background-image: url("/img/1iphone.jpg");
-    background-repeat: no-repeat;
-    width: 320px;
-    height: 466px;
-  }
-}
-
-.first-block__inform {
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 0.09em;
-  padding-top: 85px;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-.works-button {
-  display: block;
-  position: relative;
-  left: 70px;
-  width: 180px;
-  height: 50px;
-  padding: 0;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.4);
-  margin-bottom: 45px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &__text {
-    letter-spacing: 0.15em;
-    color: white;
-    transition: color 0.3s;
-  }
-  &:hover {
-    border: 1px solid rgb(255, 255, 255);
-    background: white;
-    box-shadow: 0 0 7px white;
-  }
-  &:hover &__text {
-    color: $color-main;
-  }
-}
-.container-icon {
-  height: auto;
-  margin-bottom: 30px;
-}
-.social {
+.index-first {
   display: flex;
-  justify-content: space-around;
-  color: white;
-  list-style: none;
-  padding: 0 15px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("/img/1iphone.jpg");
+  width: 100%;
+  height: 466px;
+  margin: 0;
 
-  &__item {
+  &__title {
+    width: 230px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 0.09em;
+    line-height: 140%;
+    padding-top: 85px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+  .button-form {
+    display:block;
+    width: 180px;
+    height: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: white;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      border: 1px solid rgb(255, 255, 255);
+      background: white;
+      box-shadow: 0 0 5px white;
+      color: $color-main;
+  }
+
+  .container-icon {
+    width: 320px;
+    height: auto;
+  }
+  .social {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    list-style-type: none;
+    padding: 0 15px 0;
+  }
+  .social__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,29 +143,29 @@
     cursor: pointer;
     transition: all 0.3s;
   }
-  &__item:hover {
+  .social__item:hover {
     font-size: 25px;
     color: $color-main;
     background-color: white;
     box-shadow: 0 0 7px white;
   }
-}
+  
 
-.arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  &__item {
-    filter: invert(60%);
-    cursor: pointer;
-    transition: all 0.3s;
+    &__item {
+      filter: invert(60%);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    &__item:hover {
+      filter: invert(100%);
+      transform: translateY(7px);
+    }
   }
-  &__item:hover {
-    filter: invert(100%);
-    transform: translateY(7px);
-  }
-}
 
 
 .section-second {
@@ -182,7 +177,7 @@
 .block-inform {
   width: 100%;
   
-  .block-inform__tetxt {
+  &__text {
     font-size: 16px;
     letter-spacing: 0.06em;
     padding-left: 12px;
@@ -268,7 +263,7 @@ progress {
     line-height: 170%;
     margin: 0 30px 30px 0;
   }
-  & .works-button {
+  & .button-form {
     display: block;
     position: relative;
     left: -50px;
@@ -281,7 +276,7 @@ progress {
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  & .works-button span {
+  & .button-form span {
     font-size: 11px;
     line-height: 12px;
     letter-spacing: 0.15em;
@@ -289,17 +284,17 @@ progress {
     color: white;
     transition: color 0.3s;
   }
-  & .works-button:hover {
+  & .button-form:hover {
     border: 1px solid rgb(255, 255, 255);
     background: white;
     box-shadow: 0 0 7px white;
   }
-  & .works-button:hover span {
+  & .button-form:hover span {
     color: $color-main;
   }
 }
   
-.footer-container {
+.footer {
   left: 0; 
   bottom: 0;
   width: 100%;
@@ -361,4 +356,5 @@ progress {
       }
     }
   }
+}
 }
