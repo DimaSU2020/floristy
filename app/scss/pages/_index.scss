@@ -1,7 +1,3 @@
-* {
-  border: 1px solid green;
-}
-
 body {
   display: flex;
   flex-wrap: wrap;
@@ -17,6 +13,7 @@ body {
   padding-top: 15px;
   margin-bottom: 10px;
 }
+
   .logo {
     display: block;
     width: 110px;
@@ -51,7 +48,7 @@ body {
     }
     span::before,
     span::after {
-    content: '';
+      content: '';
       display: block;
     }
     span::before {
@@ -81,9 +78,10 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   background-image: url("/img/1iphone.jpg");
+  background-repeat: no-repeat;
   width: 100%;
   height: 466px;
-  margin: 0;
+  margin: 0 0 70px 0;
 
   &__title {
     width: 230px;
@@ -117,98 +115,99 @@ body {
       background: white;
       box-shadow: 0 0 5px white;
       color: $color-main;
-  }
-
-  .container-icon {
-    width: 320px;
-    height: auto;
-  }
+    }
+  } 
   .social {
     display: flex;
-    justify-content: space-around;
-    color: white;
+    justify-content: center;
     list-style-type: none;
     padding: 0 15px 0;
-  }
-  .social__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 25px;
-    color: white;
-    background-color: $color-main;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .social__item:hover {
-    font-size: 25px;
-    color: $color-main;
-    background-color: white;
-    box-shadow: 0 0 7px white;
-  }
-  
+    margin: 0 25px 0 25px;
 
-  .arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__item {
-      filter: invert(60%);
+    &__item  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 25px 0 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 25px;
+      text-decoration: none;
+      color: white;
+      background-color: $color-main;
       cursor: pointer;
       transition: all 0.3s;
     }
+    &__item:nth-last-child(1) {
+      margin-right: 0;
+    }
+
     &__item:hover {
-      filter: invert(100%);
-      transform: translateY(7px);
+      color: $color-main;
+      background-color: white;
+      box-shadow: 0 0 7px white;
+    }
+  }
+
+  .index-first__arrow {
+    background-image: url("/img/arrow2.png");
+    background-repeat: no-repeat;
+    filter: invert(100);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  
+    &:hover {
+      transform: translateY(10px);
     }
   }
 
 
-.section-second {
+.index-catalog {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
-}
-.block-inform {
-  width: 100%;
-  
-  &__text {
+
+  &__title {
+    display: block;
+    position: relative;
+    right: 85px;  
     font-size: 16px;
     letter-spacing: 0.06em;
-    padding-left: 12px;
     text-transform: uppercase;
   }
 }
-.section-second__img {
-  display: flex;
+.index-catalog__img {
+  display: block;
   position: relative;
-  justify-content: center;
+  padding-left: 16px;
   width: 100%;
 
-  .catalog__number {
-    position: absolute;
-    top: 10px;
-    left: 110px;
-    font-size: 30px;
+  & .catalog__number {
+    display: block;
+    position: absolute; 
+    left: 115px; 
+    top: 25px;
+    font-size: 24px;
   }
-  & .catalog__line {
+  & .catalog__number::before {
+    content: '';
+    display: block;
     position: absolute;
-    top: 50px;
-    left: 40px;
-    border: 0;
     width: 60px;
-    height: 2px;
-    margin-right: 10px;
+    height: 1px;
+    top: 15px;
+    right: 40px;
+    border: 0;
     background-color: #ffffff;
   }
   & .catalog__item {
     position: absolute;
-    margin-top: 330px;
+    top: 315px;
+    padding-left: 20px;
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 0.1em;
@@ -229,71 +228,75 @@ progress {
     background: rgb(255, 255, 255);
   }
 }
-.section-third-img {
-  background-image: url("/img/3iphone.jpg");
-  background-repeat: no-repeat;
-  width: 288px;
-  height: 170px;
-  margin-bottom: 20px;
-}
-.section-third {
+
+
+.index-promo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
+  &__img {
+    margin-bottom: 10px;
+  }
+  
   &__notice {
-    width: 100%;
+    display: block;
+    position: relative;
+    width: 150px;
     padding-left: 20px;
-    margin: 0;
+    margin: 0 150px 20px 0;
     font-size: 18px;
     font-weight: 200;
     line-height: 170%;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    
+   
   }
-   .section-third__line {
+
+  &__notice::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 15px;
     width: 120px;
     height: 1px;
     background-color: #ffffff;
-    margin-right: 165px;
+    margin: 0 165px 0 0;
   }
   &__offer {
+    width: 288px;
+    padding-left: 5px;
     font-size: 14px;
     line-height: 170%;
-    margin: 0 30px 30px 0;
+    margin-bottom: 30px;
   }
-  & .button-form {
+
+
+  .button-form {
     display: block;
-    position: relative;
-    left: -50px;
     width: 180px;
     height: 50px;
-    padding: 0;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 45px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  & .button-form span {
-    font-size: 11px;
-    line-height: 12px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    border: 1px solid rgb(0, 0, 0,);
+    background-color: rgb(0, 0, 0);
+    font-size: 10px;
+    letter-spacing: 0.25em;
     color: white;
-    transition: color 0.3s;
-  }
-  & .button-form:hover {
-    border: 1px solid rgb(255, 255, 255);
-    background: white;
-    box-shadow: 0 0 7px white;
-  }
-  & .button-form:hover span {
-    color: $color-main;
-  }
-}
-  
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 110px 20px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      border: 1px solid rgb(255, 255, 255);
+      background: white;
+      box-shadow: 0 0 5px white;
+      color: $color-main;
+    }
+  } 
+} 
+
+
 .footer {
   left: 0; 
   bottom: 0;
@@ -302,33 +305,26 @@ progress {
   &__line {
     display: block;
     position: relative;
-    align-self: center;
-    width: 100%;
-    height: 5px;
-    border: none;
-    background-color: $color-main;
-  
-    & span {
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      width: 90%;
-      height: 1px;
-      background-color:rgb(146, 146, 146);
-    }
+    margin-left: auto; 
+    margin-right: auto;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(114, 114, 114);
   }
-  &__text {
-    padding: 0; 
+  &__nav {
+    padding: 0;
+    text-align:  center;
   }
-  li {
+  .nav__item {
     position: relative;
     font-size: 16px;
     font-weight: lighter;
     color: rgb(146, 146, 146);
     line-height: 25px;
     list-style-type: none;
+    text-decoration: none;
     text-align:  center;
-    transition: color 0.3s;
+    transition: all 0.3s;
   
     &:hover {
       color: rgb(255, 255, 255);
@@ -341,7 +337,7 @@ progress {
   }
   .social {
     height: 35px;
-    margin: 0;
+    margin: 20px;
 
     &__item {
       font-size: 25px;
@@ -356,5 +352,4 @@ progress {
       }
     }
   }
-}
 }
