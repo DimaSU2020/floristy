@@ -5,13 +5,14 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../fonts/PlayfairDisplay-Regular.eot") format("eot"), url("../fonts/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 100%;
   font-family: Forum, san-serif;
   color: white;
   background-color: #3B181E; }
@@ -20,16 +21,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  padding-top: 15px;
-  margin-bottom: 10px; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  padding: 15px 25px 15px 25px; }
 
 .logo {
   display: block;
-  width: 110px;
-  margin-right: 25px; }
+  width: 110px; }
   .logo__slogan {
     font-size: 12px;
     letter-spacing: 0.06em;
@@ -89,29 +89,36 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url("/img/1iphone.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
+  background-size: cover;
+  max-width: 100%;
   height: 466px;
   margin: 0 0 70px 0; }
   .index-first__title {
-    width: 230px;
-    height: 100px;
+    width: 250px;
     text-align: center;
+    font-family: PlayfairDisplay;
     font-size: 30px;
     font-weight: 100;
     letter-spacing: 0.09em;
     line-height: 140%;
     padding-top: 85px;
-    margin: 0;
+    margin: 0 0 30px 0;
     text-transform: uppercase; }
 
-.button-form {
+.index-first__button {
   display: block;
   width: 180px;
   height: 50px;
@@ -121,11 +128,11 @@ body {
   letter-spacing: 0.25em;
   color: white;
   text-transform: uppercase;
-  padding: 0;
+  margin: 0 0 50px 0;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-  .button-form:hover {
+  .index-first__button:hover {
     border: 1px solid white;
     background: white;
     -webkit-box-shadow: 0 0 5px white;
@@ -140,9 +147,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   list-style-type: none;
-  padding: 0 15px 0;
-  margin: 0 25px 0 25px; }
-  .social__item {
+  padding: 0;
+  margin: 0 0 20px 0; }
+  .social .social__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -152,7 +159,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 25px 0 0;
+    margin: 0 30px 0 0;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -163,60 +170,57 @@ body {
     cursor: pointer;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-  .social__item:nth-last-child(1) {
-    margin-right: 0; }
-  .social__item:hover {
-    color: #3B181E;
-    background-color: white;
-    -webkit-box-shadow: 0 0 7px white;
-            box-shadow: 0 0 7px white; }
+    .social .social__item:nth-last-child(1) {
+      margin-right: 0; }
+    .social .social__item:hover {
+      color: #3B181E;
+      background-color: white;
+      -webkit-box-shadow: 0 0 7px white;
+              box-shadow: 0 0 7px white; }
 
 .index-first__arrow {
-  background-image: url("/img/arrow2.png");
+  background-image: url("/img/arrow.png");
   background-repeat: no-repeat;
   -webkit-filter: invert(100);
           filter: invert(100);
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s; }
   .index-first__arrow:hover {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px); }
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px); }
 
 .index-catalog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
+  position: relative;
   margin-bottom: 50px; }
   .index-catalog__title {
     display: block;
     position: relative;
-    right: 85px;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 0.06em;
-    text-transform: uppercase; }
-
-.index-catalog__img {
-  display: block;
-  position: relative;
-  padding-left: 16px;
-  width: 100%; }
-  .index-catalog__img .catalog__number {
+    text-transform: uppercase;
+    padding-left: 20px; }
+  .index-catalog__img {
+    display: block;
+    position: relative;
+    width: 90%;
+    max-width: 288px;
+    height: 100%;
+    max-height: 392px;
+    padding-left: 20px;
+    margin-bottom: 10px; }
+  .index-catalog__number {
     display: block;
     position: absolute;
     left: 115px;
-    top: 25px;
+    top: 20px;
     font-size: 24px; }
-  .index-catalog__img .catalog__number::before {
+  .index-catalog__number::before {
     content: '';
     display: block;
     position: absolute;
@@ -226,19 +230,30 @@ body {
     right: 40px;
     border: 0;
     background-color: #ffffff; }
-  .index-catalog__img .catalog__item {
+  .index-catalog__item {
+    width: 80%;
+    max-width: 288px;
     position: absolute;
-    top: 315px;
+    top: 330px;
+    left: 15px;
     padding-left: 20px;
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 0.1em;
     text-transform: uppercase; }
 
+.index-catalog__indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 progress {
   border: 0;
   width: 60px;
-  height: 4px;
+  height: 3px;
   margin-right: 10px;
   background-color: #ffffff; }
   progress:nth-last-child(1) {
@@ -247,21 +262,21 @@ progress {
     background: white; }
 
 .index-promo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .index-promo__img {
-    margin-bottom: 10px; }
+  display: block; }
+  .index-promo .index-promo__img {
+    text-align: center;
+    max-width: 90%;
+    height: auto;
+    max-height: 323px;
+    overflow: hidden;
+    margin: 0 auto; }
   .index-promo__notice {
     display: block;
     position: relative;
+    max-width: 90%;
+    text-align: start;
     width: 150px;
-    padding-left: 20px;
+    padding-left: 10%;
     margin: 0 150px 20px 0;
     font-size: 18px;
     font-weight: 200;
@@ -272,18 +287,18 @@ progress {
     content: "";
     position: absolute;
     top: 70px;
-    left: 15px;
-    width: 120px;
+    right: 10%;
+    width: 130px;
     height: 1px;
-    background-color: #ffffff;
-    margin: 0 165px 0 0; }
+    background-color: #ffffff; }
   .index-promo__offer {
-    width: 288px;
-    padding-left: 5px;
+    width: 80%;
+    max-width: 288px;
+    padding-left: 10%;
     font-size: 14px;
     line-height: 170%;
     margin-bottom: 30px; }
-  .index-promo .button-form {
+  .index-promo .index-promo__button {
     display: block;
     width: 180px;
     height: 50px;
@@ -293,12 +308,12 @@ progress {
     letter-spacing: 0.25em;
     color: white;
     text-transform: uppercase;
-    padding: 0;
-    margin: 0 110px 20px 0;
+    padding-left: 0;
+    margin: 0 110px 20px 10%;
     cursor: pointer;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-    .index-promo .button-form:hover {
+    .index-promo .index-promo__button:hover {
       border: 1px solid white;
       background: white;
       -webkit-box-shadow: 0 0 5px white;
@@ -312,8 +327,7 @@ progress {
   .footer__line {
     display: block;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 90%;
     height: 1px;
     background-color: #727272; }
